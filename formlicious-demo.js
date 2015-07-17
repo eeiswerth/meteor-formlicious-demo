@@ -5,7 +5,8 @@ if (Meteor.isClient) {
         data: {
           field1: 'My data',
           field5: true,
-          field6: [true, false, true]
+          field6: [true, false, true],
+          field7: [true, false, true]
         },
         fields: [
           {
@@ -52,7 +53,17 @@ if (Meteor.isClient) {
             fields: [
               {text: "Checkbox 1"},
               {text: "Checkbox 2"},
-              {text: "Checkbox 4"}
+              {text: "Checkbox 3"}
+            ]
+          },
+          {
+            name: 'field7',
+            title: "Radio Group",
+            type: 'radio-group',
+            fields: [
+              {text: "Radio 1"},
+              {text: "Radio 2"},
+              {text: "Radio 3"}
             ]
           }
         ],
