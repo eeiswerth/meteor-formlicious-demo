@@ -2,3 +2,4 @@
 *.iml
 .idea
 packages
+*.log
