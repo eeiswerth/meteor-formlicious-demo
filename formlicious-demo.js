@@ -14,7 +14,7 @@ if (Meteor.isClient) {
             title: 'My textarea',
             type: 'textarea',
             maxlength: 500,
-            validators: Formlicious.validators.stringValidator
+            validator: Formlicious.validators.stringValidator
           },
           {
             name: 'field2',
