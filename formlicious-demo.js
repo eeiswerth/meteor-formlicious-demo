@@ -69,8 +69,8 @@ if (Meteor.isClient) {
         ],
         buttons: [
           {
-            text: 'Cancel',
-            classes: 'btn-danger',
+            text: 'Reset',
+            classes: 'btn-warning',
             callback: function(api, result, data) {
               console.log(arguments);
               api.reset();
@@ -79,6 +79,7 @@ if (Meteor.isClient) {
           {
             text: 'Save',
             classes: 'btn-primary',
+            disableOnClick: true,
             type: 'submit',
             callback: function(api, result, data) {
               console.log(arguments);
