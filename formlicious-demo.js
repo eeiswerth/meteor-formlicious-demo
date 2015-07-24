@@ -29,7 +29,7 @@ if (Meteor.isClient) {
             maxlength: 5
           },
           {
-            name: 'field3',
+            name: 'field13',
             title: 'My date',
             type: 'date'
           },
