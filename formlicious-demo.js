@@ -1,7 +1,12 @@
 if (Meteor.isClient) {
+
+  var _data = new ReactiveVar(null);
+
   Template.demo.helpers({
     myOptions: function() {
       return {
+        showSpinnerOnSubmit: true,
+        spinnerUrl: '/img/spinner.gif',
         data: {
           field1: 'My data',
           field5: true,
@@ -72,7 +77,6 @@ if (Meteor.isClient) {
             text: 'Reset',
             classes: 'btn-warning',
             callback: function(api, result, data) {
-              console.log(arguments);
               api.reset();
             }
           },
@@ -82,11 +86,24 @@ if (Meteor.isClient) {
             disableOnClick: true,
             type: 'submit',
             callback: function(api, result, data) {
-              console.log(arguments);
+              setTimeout(function() {
+                api.hideSpinner();
+                api.enable();
+                _data.set(JSON.stringify(data, null, 2));
+              }, 3000);
             }
           }
         ]
       }
+    }
+  });
+
+  Template.demoFormData.helpers({
+    hasData: function() {
+      return _data.get() != null;
+    },
+    data: function() {
+      return _data.get();
     }
   });
 }

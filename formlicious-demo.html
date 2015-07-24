@@ -11,5 +11,18 @@
 <template name="demo">
   <div class="container">
     {{> formlicious options=myOptions}}
+
+    <br>
+    <br>
+    {{> demoFormData}}
   </div>
+</template>
+
+<template name="demoFormData">
+  {{#if hasData}}
+      <div class="jumbotron">
+        <p>The data: </p>
+        <pre>{{data}}</pre>
+      </div>
+  {{/if}}
 </template>
