@@ -75,7 +75,10 @@ if (Meteor.isClient) {
             name: 'field8',
             title: 'Uploads',
             type: 'dropzone',
-            required: true
+            required: true,
+            options: {
+              addRemoveLinks: true
+            }
           }
         ],
         buttons: [
