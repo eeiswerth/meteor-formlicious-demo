@@ -70,6 +70,12 @@ if (Meteor.isClient) {
               {text: "Radio 2"},
               {text: "Radio 3"}
             ]
+          },
+          {
+            name: 'field8',
+            title: 'Uploads',
+            type: 'dropzone',
+            required: true
           }
         ],
         buttons: [
