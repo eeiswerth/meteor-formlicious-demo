@@ -79,6 +79,15 @@ if (Meteor.isClient) {
             options: {
               addRemoveLinks: true
             }
+          },
+          {
+            name: 'field9',
+            title: 'File upload',
+            type: 'file-upload',
+            required: true,
+            removeText: 'Remove',
+            buttonText: 'Upload',
+            accept: 'image/*'
           }
         ],
         buttons: [
