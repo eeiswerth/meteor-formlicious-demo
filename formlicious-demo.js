@@ -86,7 +86,8 @@ if (Meteor.isClient) {
             type: 'file-upload',
             required: true,
             removeText: 'Remove',
-            buttonText: 'Upload'
+            buttonText: 'Upload',
+            width: 500
             //accept: 'image/*'
           }
         ],
@@ -104,6 +105,11 @@ if (Meteor.isClient) {
             disableOnClick: true,
             type: 'submit',
             callback: function(api, result, data) {
+              if (!result.valid) {
+                api.hideSpinner();
+                api.enable();
+                return;
+              }
               setTimeout(function() {
                 api.hideSpinner();
                 api.enable();
