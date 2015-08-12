@@ -86,8 +86,8 @@ if (Meteor.isClient) {
             type: 'file-upload',
             required: true,
             removeText: 'Remove',
-            buttonText: 'Upload',
-            accept: 'image/*'
+            buttonText: 'Upload'
+            //accept: 'image/*'
           }
         ],
         buttons: [
