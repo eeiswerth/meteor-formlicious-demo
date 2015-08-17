@@ -96,6 +96,7 @@ if (Meteor.isClient) {
             text: 'Reset',
             classes: 'btn-warning',
             callback: function(api, result, data) {
+              _data.set(null);
               api.reset();
             }
           },
@@ -105,11 +106,6 @@ if (Meteor.isClient) {
             disableOnClick: true,
             type: 'submit',
             callback: function(api, result, data) {
-              if (!result.valid) {
-                api.hideSpinner();
-                api.enable();
-                return;
-              }
               setTimeout(function() {
                 api.hideSpinner();
                 api.enable();
