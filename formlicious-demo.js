@@ -11,7 +11,8 @@ if (Meteor.isClient) {
           field1: 'My data',
           field5: true,
           field6: [true, false, true],
-          field7: [true, false, true]
+          field7: [true, false, true],
+          field10: 'c'
         },
         fields: [
           {
@@ -69,6 +70,18 @@ if (Meteor.isClient) {
               {text: "Radio 1"},
               {text: "Radio 2"},
               {text: "Radio 3"}
+            ]
+          },
+          {
+            name: 'field10',
+            title: 'Real Select',
+            type: 'select',
+            required: true,
+            values: [
+              {value: 'na', text: 'N/A'},
+              {value: 'a', text: 'A'},
+              {value: 'b', text: 'B'},
+              {value: 'c', text: 'C'}
             ]
           },
           {
